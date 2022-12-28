@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1ec447684a.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #screen {
+            width: 100%;
+        }
+
+        #navbar {
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            cursor: pointer;
+            margin-top: -100px;
+        }
+
+        #navbar div {
+            padding: 8px;
+            color: white;
+        }
+
+        #navbar>div:nth-child(1)>img {
+            width: 120px;
+            height: 30px;
+
+        }
+
+        #navbar>div:nth-child(2) {
+            margin-top: 5px;
+            width: 40%;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-evenly;
+            color: #dccfcf;
+            margin-left: 70px;
+        }
+
+        #navbar>div:nth-child(2)>h2:hover {
+            color: white;
+        }
+
+        #navbar div:nth-child(3) {
+            padding-top: 5px;
+            display: flex;
+            justify-content: space-evenly;
+            width: 25%;
+
+        }
+
+        /* ------------------------------------------------ */
+        #navbar>div:nth-child(3)>div:nth-child(1)>button {
+            width: 100px;
+            height: 40px;
+            background-color: black;
+            color: white;
+            margin-top: -7px;
+        }
+
+        #navbar>div:nth-child(3)>div:nth-child(1)>button:hover {
+            color: black;
+            background-color: gray;
+            border-radius: 10px;
+
+        }
+
+        /* -------------------------------------------- */
+        #navbar>div:nth-child(3)>div:nth-child(1)>button:nth-child(1)>span {
+            font-size: 16px;
+            margin-right: 5px;
+            color: rgb(255, 254, 254);
+        }
+
+        #navbar>div:nth-child(3)>div:nth-child(2)>button {
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            width: 100px;
+            height: 40px;
+            margin-top: -7px;
+
+        }
+
+        #navbar>div:nth-child(3)>div:nth-child(2)>button:hover {
+            border-color: gray;
+        }
+
+        #navbar>div:nth-child(3)>div:nth-child(3) {
+            margin-top: 16px;
+        }
+
+        #navbar>div:nth-child(3)>div:nth-child(4) {
+            margin-top: 6px;
+        }
+
+        /* -----------------------------BODY CSS------------------------------- */
+        #body {
+            width: 100%;
+            border: 1px solid rgb(10, 5, 5);
+            background-color: #171a26;
+            margin-top: 100px;
+            /* z-index: -2; */
+        }
+
+        #body>div:nth-child(1) {
+            /* background-image: url("/IRise_Assigment/Assignment_Irise/Images/Screenshot\ \(572\).png");
+            width: 100%;
+            height: 690px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 700px;
+            margin-top: -15rem */
+            margin-top: -4rem;
+            /* margin-top: -122px; */
+        }
+
+        #body>div:nth-child(2) {
+            width: 75%;
+            margin: auto;
+            height: 270px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            margin-top: 120px;
+        }
+
+        #Explorebtn {
+            width: 180px;
+            height: 40px;
+            color: #F06055;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .btnicons {
+            margin-top: -105px;
+        }
+
+        #Explorebtn>button:hover {
+            color: black;
+        }
+
+        .nthdiv {
+            width: 100%;
+            margin-top: 158px;
+            display: flex;
+            justify-content: space-between;
+            /* background: #171a26; */
+        }
+
+        .div {
+            width: 31%;
+            height: 130px;
+            color: white;
+            /* background-color: rgb(255 255 248 / 5%); */
+            background: rgb(255 255 255 / 5%);
+            border: 1px solid gray;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+
+        #body>div:nth-child(2)>div:nth-child(3)>div:hover {
+            background-color: rgb(71, 71, 71);
+        }
+
+        /* ------------------body Card Section------------ */
+        #Card {
+            display: flex;
+            width: 100%;
+            margin-top: 80px;
+            margin-top: 40px;
+            background-color: #171a26;
+
+        }
+
+        #Card>div {
+            width: 28%;
+            margin: auto;
+            height: 500px;
+            /* border: 1px solid black; */
+        }
+
+        #Card>div>img {
+            margin-top: 10px;
+            width: 80%;
+            height: 240px;
+            margin-left: 10%;
+        }
+
+        #Card>div>img:hover {
+            transform: scale(0.9);
+        }
+
+        #Card>div>ul {
+            width: 70%;
+            margin: auto;
+            margin-bottom: 10px;
+            color: rgb(255 255 255 / 70%);
+            font-size: 18px;
+        }
+
+        #Card>div>div {
+            width: 80%;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+
+        #Card>div>div>button {
+            width: 49%;
+            height: 40px;
+            margin-top: 80px;
+            border: none;
+        }
+
+        #Card>div>div>button:nth-child(1) {
+            color: white;
+            font-weight: 700;
+            /* background-color: rgb(77, 76, 76); */
+            background-color: rgb(255 255 255 / 10%);
+            border-radius: 7px;
+        }
+
+        #Card>div>div>button:nth-child(1):hover {
+            background-color: rgb(112, 107, 107);
+        }
+
+        #Card>div>div>button:nth-child(2) {
+            color: #F06055;
+            font-weight: bold;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 7px;
+        }
+
+        #Card>div>div>button:nth-child(2):hover {
+            color: black;
+        }
+
+        #Card>div>h2 {
+            color: white;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+
+        /* -----------------cultpass----------------- */
+        #cultpass>div:nth-child(1)>img {
+            margin-top: 60px;
+            width: 260px;
+            height: 70px;
+        }
+
+        #cultpass>div:nth-child(2) {
+            margin-top: 30px;
+        }
+
+        #cultpass>div:nth-child(2)>a {
+            font-size: 12px;
+            color: #3888FF;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        #body>div:nth-child(1)>h4 {
+            text-align: center;
+            margin-top: -28rem;
+            /* margin-bottom: 197px; */
+        }
+
+        #body>div:nth-child(1)>h5 {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 30px;
+            font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+            /* line-height: 35px; */
+            color: white;
+            margin-bottom: 40px;
+
+        }
+
+        /* .nthdiv:hover{
+            background-color: rgb(255 255 255 / 5%);
+        }
+        .nthdiv{
+            background-color: rgb(255 255 255 / 5%);
+        }
+        .nthdiv>div:nth-child(3):hover{
+            background-color: rgb(255 255 255 / 5%);
+        } */
+
+        #Wellnesshub {
+            display: flex;
+            justify-content: space-evenly;
+            width: 71%;
+            height: 450px;
+            margin: auto;
+            background: linear-gradient(to bottom, #7d7c9e, #b1bece);
+            padding: 10px;
+            margin-top: 80px;
+            margin-bottom: 70px;
+            border-radius: 20px;
+
+        }
+
+        .Hub {
+            width: 40%;
+            height: 100px;
+            padding-top: 90px;
+            margin-left: 20px;
+            margin-left: 20px;
+        }
+
+        .Hub>h3 {
+            font-family: Inter-Bold, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+            color: white;
+            font-size: 40px;
+            font-weight: 700;
+            margin-left: 10px;
+
+
+        }
+
+        .Hub>p {
+            font-size: 20px;
+            font-weight: 550;
+            line-height: 25px;
+            color: white;
+            margin-left: 10px;
+
+        }
+
+        .list>ul {
+            margin-top: 50px;
+        }
+
+        .list>ul>li {
+            color: rgb(0 0 0 / 70%);
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px;
+            list-style-type: none;
+            font-weight: 300;
+        }
+
+        .list>ul>li>i {
+            color: #9aa0b8;
+            margin-left: 10px;
+        }
+
+        .list>ul>li>i:hover {
+            color: black;
+
+        }
+
+        .list>ul>li:hover {
+            color: black;
+            width: 65%;
+            background-color: white;
+            border-radius: 25px;
+        }
+
+        #HubRight {
+            width: 80%;
+            margin-top: 60px;
+            margin-left: 15px;
+        }
+
+        #HubRight>div>img {
+
+            padding: 5px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        #HubRight>div>img:hover {
+            transform: scale(1.05);
+        }
+
+        /* ---------------------------------------------- */
+
+        /* ----------Banner------------- */
+        #Bannerapp {
+            margin-bottom: 50px;
+        }
+
+        .Banner {
+            margin: auto;
+            border-radius: 20px;
+            background-image: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_1200,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/download-app/download-app-variant-2.png");
+            width: 73%;
+            height: 320px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            background-position: right center;
+            border: none;
+        }
+
+        #Bannerapp>.Banner>.content {
+            padding: 40px;
+            color: white;
+
+        }
+
+        #Bannerapp>.Banner>.content>h1 {
+            font-weight: 700;
+
+        }
+
+        #Bannerapp>.Banner>.content>p {
+            color: rgb(255 255 255 / 80%);
+            line-height: 90px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        #Bannerapp>.Banner>.content>div>img {
+            margin-top: 25px;
+            padding: 10px;
+        }
+
+        /* --------------------Career family--------------------- */
+        #CultFamily {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 65%;
+            margin: auto;
+            margin-left: 190px;
+
+            margin-bottom: 10px;
+
+
+
+        }
+
+        #CultFamily>.maincareer:hover {
+            transform: scale(1.02);
+
+        }
+
+        #CultFamily>.maincareerRight:hover {
+            transform: scale(1.02);
+
+        }
+
+        .cutfamilyh1 {
+            text-align: center;
+            color: white;
+            font-size: 5rem;
+            margin-bottom: 50px;
+        }
+
+        #CultFamily>.maincareer>.Career>h3 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 180px;
+
+        }
+
+        #CultFamily>.maincareerRight>.CareerRight>.cultRight>h2 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            color: #f38f4c;
+
+
+        }
+
+        #CultFamily>.maincareerRight>.CareerRight>.cultRight>p {
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            line-height: 100px;
+            letter-spacing: 0px;
+        }
+
+        #CultFamily>.maincareer>.Career>h5 {
+            text-align: center;
+            cursor: pointer;
+
+            font-weight: 700;
+            color: #3888FF;
+
+
+        }
+
+        #CultFamily>.maincareerRight>.CareerRight>.cultRight>h5 {
+            text-align: center;
+            cursor: pointer;
+            margin-top: 60px;
+            font-weight: 700;
+            color: #3888FF;
+
+        }
+
+        #CultFamily>.maincareer>.Career {
+            margin: 40px;
+            padding: 20px;
+            background-image: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_600,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/join-the-cult/career-icons-v2.png");
+            width: 100%;
+            height: 260px;
+            background-color: #363843;
+
+            background-size: contain;
+            background-size: 377px 170px;
+            background-repeat: no-repeat;
+            border-radius: 25px;
+
+            background-position: center center;
+
+        }
+
+        #CultFamily>.maincareerRight>.CareerRight {
+            margin: 40px;
+            padding: 20px;
+            background-image: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_600,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/join-the-cult/cult-for-business.png");
+            width: 100%;
+            height: 260px;
+            background-color: #363843;
+
+            background-size: contain;
+            background-size: 436px 360px;
+            background-repeat: no-repeat;
+            border-radius: 25px;
+            background-position: center center;
+        }
+
+        /* --------------------------Dailyfood------------------------------ */
+        #Dailyfood {
+
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: auto;
+            background-image: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_1000,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/we_are_cult_new.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            margin-bottom: 100px;
+        }
+
+        #Dailyfood>div:nth-child(1) {
+            width: 100%;
+            height: 500px;
+        }
+
+        #Dailyfood>div:nth-child(2) {
+            /* margin-right: 35vw; */
+            margin-left: 300px;
+
+        }
+
+        #Dailyfood>div:nth-child(2)>h3 {
+            font-size: 21px;
+            font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+            letter-spacing: 0px;
+            line-height: 35px;
+            color: #b5b6ba;
+            width: 70%;
+            margin-top: 115px;
+        }
+
+        /* ------------------------------footersecondlast---------------------------------- */
+        #footergroup{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 450px;
+            margin: auto;
+            background-color: #000000;
+            margin-bottom: p
+        }
+        #footergroup>div:nth-child(1){
+            width: 25%;
+            margin-top: -100px;
+        }
+        #footergroup>div:nth-child(1)>img{
+            width: 150px;
+            height: 40px;
+        }
+        #footergroup>div:nth-child(1)>p{
+            color: #a1a1a1;
+            margin-top: 50px;
+            font-weight: 550;
+        }
+
+        #footergroup>div:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 60px;
+        }
+        #footergroup>div:nth-child(2)>a{
+            text-decoration: none;
+            color: #a1a1a1;
+            font-weight: 550;
+        }
+        #footergroup>div:nth-child(3){
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 80px;
+        }
+        #footergroup>div:nth-child(3)>a{
+            text-decoration: none;
+            color: #a1a1a1;
+            font-weight: 550;
+        }
+        #footergroup>div:nth-child(4){
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 80px;
+        }
+        #footergroup>div:nth-child(4)>a{
+            text-decoration: none;
+            color:#a1a1a1;
+            font-weight: 550;
+        }
+        #footergroup>div:nth-child(5){
+            display: flex;
+            flex-direction: column;
+        justify-content:space-between;
+        
+        }
+        #footergroup>div:nth-child(5)>div:nth-child(1){
+            margin-left: 50px;
+                  margin-top: 0px;
+                  line-height: 50px;
+                  cursor: pointer;
+        }
+        #footergroup>div:nth-child(5)>div:nth-child(2){
+            margin-left: 50px;
+            cursor: pointer;
+        }
+            
+        #footergroup>div:nth-child(5)>div:nth-child(3){
+            margin-top: 80px;
+            
+        }
+
+        #footergroup>div:nth-child(5)>div:nth-child(3)>span>i{
+            color: #a1a1a1;
+            margin: 10px;
+            cursor: pointer;
+ 
+        }
+        /* -----------------------------FooterEnd page---------------------------------- */
+        #footerpage{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #111213;
+            font-family: 'BrandonTextWeb-Regular';
+            width: 100%;
+            height: 250px;
+          
+            line-height: 20px;
+        }
+        #footerpage>div{
+           width: 160px;
+        }
+        #footerpage>div>a{
+            text-decoration: none;
+            color: #7e7e7f;
+            
+        }
+        #footerpage>div>h3>a{
+            text-decoration: none;
+            color: #8b8b8b;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="screen">
+        <div id="navbar">
+            <div>
+                <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_120,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/vman-and-white-cult-text.png"
+                    alt="logo" />
+            </div>
+
+            <div>
+                <h2>FITNESS</h2>
+                <h2>CARE</h2>
+                <h2>MIND</h2>
+                <h2>STORE</h2>
+            </div>
+
+            <div>
+                <div>
+                    <button>
+                        <span>NAGPUR</span>
+                        <i class="fa-solid fa-location-dot fa-xl"></i>
+                    </button>
+                </div>
+                <div>
+                    <button>GET APP</button>
+                </div>
+                <div>
+                    <i class="fa-regular fa-user fa-xl"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- -----------------------------------------------------body-------------------------------- -->
+        <div id="body">
+            <div>
+                <video width="100%" autoplay muted loop>
+                    <source
+                        src="https://cdn-images.cure.fit/www-curefit-com/video/upload/c_fill,w_1400,ar_1.77,q_auto:eco,dpr_1,vc_auto,f_auto/video/test/we-are-cult-web.mp4"
+                        type="video/mp4">
+
+                </video>
+                <h4> <img width="300px"
+                        src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_500,q_auto:eco,dpr_1,f_auto,fl_progressive/image/test/we-are-cult-logo/text-only-v2.png"
+                        alt=""></h4>
+                <h5>A fitness movement that is worth <br>breaking a sweat for</h5>
+                <!-- <h6 style="margin-top: -20px;"></h6> -->
+            </div>
+            <div>
+                <div class="btnicons"> <button id="Explorebtn">EXPLORE CULTPASS</button>
+                    <i style=" margin-left:75px; color: white; margin-top: 20px; display: flex; justify-content: space-between;"
+                        class="fa-solid fa-chevron-down fa-xl"></i>
+                </div>
+                <div class="nthdiv">
+                    <div class="div" style="margin-top: 5px;">
+                        <h4 style="  margin-top: 10px;"><img width="100px"
+                                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_106,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass.svg"
+                                alt=""></h4>
+                        <h1 style="  font-size: 30px; color: yellow; font-weight: 700;margin-top: 2px;"><img
+                                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_107,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/cult-pass-elite-partial.png"
+                                alt=""></h1>
+                        <p
+                            style=" font-size: 12px;   color: rgb(255 255 255 / 60%);margin-top: 30px;width: 70%; margin: auto;">
+                            Unlimited access to group classes, all gyms and at-home workouts</p>
+                    </div>
+                    <div class="div" style="margin-top: 5px;">
+                        <h4 style=" font-size: 22px; margin-top: 10px;"><img width="100px"
+                                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_106,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass.svg"
+                                alt=""></h4>
+                        <h1 style="  font-size: 30px; color: yellow; font-weight: 700;margin-top: 2px;"><img
+                                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_78,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/cult-pass-pro-partial.png"
+                                alt=""></h1>
+                        <p
+                            style=" font-size: 12px;   color: rgb(255 255 255 / 60%);margin-top: 30px;width: 70%; margin: auto;">
+                            Unlimited access to group classes, all gyms and at-home workouts</p>
+                    </div>
+                    <div class="div" style="margin-top: 5px;">
+                        <h4 style=" font-size: 22px; font-weight: 700px; margin-top: 10px;"><img width="100px"
+                                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_106,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass.svg"
+                                alt=""></h4>
+                        <h1 style="  font-size: 30px; color: yellow; font-weight: 700;margin-top: 2px;"><img
+                                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_112,q_auto:eco,dpr_1,f_auto,fl_progressive//image/test/brand-logo/cult-pass-home-partial-1.svg"
+                                alt=""></h1>
+                        <p
+                            style=" font-size: 12px;   color: rgb(255 255 255 / 60%);margin-top: 30px;width: 70%; margin: auto;">
+                            Unlimited access to group classes, all gyms and at-home workouts</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ----------------------------------------------------------CARD-------------------------------------------- -->
+            <div id="cultpass" style="text-align: center;" ;>
+                <!-- <h1>cultpass</h1> -->
+                <div>
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_259,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/cult-pass.svg"
+                        alt="">
+                </div>
+                <div>
+                    <a href="">LEARN MORE</a>
+                </div>
+            </div>
+            <div id="Card">
+                <div>
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_404,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/introducting-cult-pass/icp_cb.png"
+                        alt="">
+                    <h2>Unlimited access to</h2>
+                    <ul>
+                        <li>Unlimited access to</li>
+                        <li>All ELITE & PRO gyms</li>
+                        <li>At-home live workouts</li>
+                    </ul>
+                    <div>
+                        <button>TRY OR FREE</button>
+                        <button>LEARN MORE</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_404,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/introducting-cult-pass/icp_cg.png"
+                        alt="">
+                    <h2>Unlimited access to</h2>
+                    <ul>
+                        <li>Unlimited access to</li>
+                        <li>All ELITE & PRO gyms</li>
+                        <li>At-home live workouts</li>
+                    </ul>
+                    <div>
+                        <button>TRY OR FREE</button>
+                        <button>LEARN MORE</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_404,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/introducting-cult-pass/icp_cl.png"
+                        alt="">
+                    <h2>Unlimited access to</h2>
+                    <ul>
+                        <li>Unlimited access to</li>
+                        <li>All ELITE & PRO gyms</li>
+                        <li>At-home live workouts</li>
+                    </ul>
+                    <div>
+                        <button>TRY OR FREE</button>
+                        <button>LEARN MORE</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="Wellnesshub">
+                <div class="Hub">
+                    <h3>Wellness Hub</h3>
+                    <p>One place for all your <br> well- being needs</p>
+                    <div class="list">
+                        <ul>
+                            <li>WORKOUTS GEAR<i class="fa-solid fa-angle-right"></i></li>
+                            <li>LABS<i class="fa-solid fa-angle-right"></i></li>
+                            <li>THERAPY<i class="fa-solid fa-angle-right"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- --------Rightpart imag-- -->
+                <div id="HubRight">
+                    <div>
+                        <img width="280px" height="160px" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_276,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/wellness-widget/therapy_desk/therapy1.png"
+                            alt="">
+
+                        <img width="280px" height="160px" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_276,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/wellness-widget/therapy_desk/therapy2.png"
+                            alt="">
+
+                        <img width="280px" height="160px" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_276,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/wellness-widget/therapy_desk/therapy3.png"
+                            alt="">
+
+                        <img width="280px" height="160px" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_276,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/wellness-widget/therapy_desk/therapy4.png"
+                            alt="">
+
+                    </div>
+                </div>
+            </div>
+            <!-- -------------  -->
+            <div id="Bannerapp">
+                <div class="Banner">
+                    <div class="content">
+                        <h1>Download the most loved <br> fitness app</h1>
+                        <p>Start your fitness journey with us.join the cut!</p>
+                        <div>
+                            <img width="130" height="45"
+                                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,h_50,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/download-app/app-store-dark-card-2.png"
+                                alt="">
+                            <img width="150" height="45"
+                                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,h_50,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/download-app/play-store-dark-card-2.png"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ---------------------  -->
+            <!-- ----------Career Join Family---------- -->
+            <div class="flex">
+                <h1 class="cutfamilyh1">Join the Cult family</h1>
+                <div id="CultFamily">
+
+                    <div class="maincareer">
+                        <div class="Career">
+                            <h3>Careers at cult</h3>
+                            <h5>LEARN MORE</h5>
+                        </div>
+                    </div>
+                    <div class="maincareerRight">
+                        <div class="CareerRight">
+                            <div class="cultRight">
+                                <h2>cult.fit franchise <br> opportunities</h2>
+                                <p>Partner with largest fitness brand in india</p>
+                                <h5>LEARN MORE</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- -------------------------DailyFood----------------------------------- -->
+            <div id="Dailyfood">
+                <div class="DailyImages"></div>
+                <div>
+                    <h3>At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with
+                        yoga & meditation, and medical & lifestyle care hassle-free.#BeBetterEveryDay</h3>
+                </div>
+            </div>
+            <!-- --------------------------------footer-------------------------------------------------- -->
+
+    <div id="footergroup">
+        <div>
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_120,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/brand-logo/vman-and-white-cult-text.png" alt="logo" />
+            <p>At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation, Medical & lifestyle care hassle-free.#BeBetterEveryDay</p>
+        </div>
+        <div>
+            <a href="">cult.fit for business</a>
+            <a href="">cult.fit franchise</a>
+            <a href="">corporate partnerships</a>
+            <a href="">cult pass network</a>
+            <a href="">t&c for business</a>
+        </div>
+        <div>
+            <a href="">partner.fit</a>
+            <a href="">blog</a>
+            <a href="">security</a>
+            <a href="">careers</a>
+        </div>
+        <div>
+            <a href="">contact us</a>
+            <a href="">privacy policy</a>
+            <a href="">cult bmi calculator</a>
+            <a href="">terms & conditions</a>
+        </div>
+        <div>
+            <div>
+                <img height="50px" width="180px" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_178,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/download-app/app-store-dark-card-2.png" alt="">
+            </div>
+            <div>
+                <img height="50px" width="180px" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_178,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/download-app/play-store-dark-card-2.png" alt="">
+            </div>
+            <div>
+                <span><i class="fa-brands fa-youtube fa-2xl"></i></span>
+                <span><i class="fa-brands fa-facebook fa-2xl"></i></span>
+                <span><i class="fa-brands fa-twitter fa-2xl"></i></span>
+                <span><i class="fa-brands fa-square-instagram fa-2xl"></i></span>
+                <span><i class="fa-brands fa-linkedin fa-2xl"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="footerpage">
+        <div>
+            <h3><a href="">Related Searches</a></h3>
+            <a href="">Gym Near Me</a><br>
+            <a href="">Yoga Postures for Beginners</a>
+            <a href="">Bedtime Stories for Kids</a>
+            <a href="">Gyms in Pune</a>
+            <a href="">Gyms in Chandigarh</a>
+            <a href="">Strength Training</a>
+            <a href="">Core Exercises</a>
+            <a href="">Fitness Glossary</a>
+        </div>
+        <div>
+            <a href="">Face Yoga</a>
+            <a href="">Chest Exercises</a>
+            <a href="">Gyms in Hyderabad</a>
+            <a href="">Surya Namaskar for Beginners</a>
+            <a href="">Gyms in Indore</a>
+            <a href="">Mobility Exercises</a>
+            <a href="">Butt Exercises</a>
+            <a href="">Morning Exercise</a>
+        </div>
+        <div>
+            <a href="">Healthy Recipes</a>
+            <a href="">Yoga For Stress Relief</a>
+            <a href="">Mindfulness Meditation</a>
+            <a href="">Gyms in Chennai</a>
+            <a href="">Gyms in Coimbatore</a>
+            <a href="">Kids Exercise</a>
+            <a href="">Arm Workout at Home</a>
+            <a href="">Home Workouts</a>
+        </div>
+        <div>
+            <a href="">Chest Exercises</a>
+            <a href="">Yoga Asanas</a>
+            <a href="">Yoga Nidra</a>
+            <a href="">Gyms in Jaipur</a>
+            <a href="">Gyms in Bangalore</a>
+            <a href="">How to Lose Weight</a>
+            <a href="">Back Exercises at Home</a>
+        </div>
+        <div>
+            <a href="">Exercise To Reduce Belly Fat</a>
+            <a href="">Meditation Music</a>
+            <a href="">Gyms in Mumbai</a>
+            <a href="">Gyms in Kolkata</a>
+            <a href="">Belly Fat Loss Exercise</a>
+            <a href="">HIIT Workout</a>
+            <a href="">Abs Workout at Home</a>
+        </div>
+        <div>
+            <a href="">Six Pack Workout</a>
+            <a href="">Pranayama</a>
+            <a href="">Gyms in Delhi</a>
+            <a href="">Gyms in Ahmedabad</a>
+            <a href="">Weight Loss Exercise</a>
+            <a href="">Exercises for Toned Body</a>
+            <a href="">Thigh Exercises</a>
+            <a href="">Fitness Glossary</a>
+        </div>
+    </div>
+<!-- </div> -->
+</div>
+
+<div>
+<!-- footer -->
+</div>
+
+
+</div>
+</body>
+
+</html>
